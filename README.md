@@ -7,6 +7,13 @@
   <p align="center">
     <strong>全链路异步化 / 长任务稳定性保障 / AI 智能问答 </strong>
   </p>
+  <p>
+    <img src="https://img.shields.io/badge/Spring%20Boot-3.0-green" alt="Spring Boot">
+    <img src="https://img.shields.io/badge/RocketMQ-4.9-blue" alt="RocketMQ">
+    <img src="https://img.shields.io/badge/Redisson-Lock-red" alt="Redisson">
+    <img src="https://img.shields.io/badge/LangChain4j-AI-orange" alt="LangChain4j">
+    <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License">
+  </p>
 
 
 <br/>
