@@ -1,8 +1,8 @@
 <div align="center">
-  <a href="https://github.com/Xiaoc7r/DOVideo-AI">
+  <a href="https://github.com/Xiaoc7r/VidiFlow Pro">
   </a>
 
-  <h1 align="center">DoVideoAI - 智能视频内容理解平台</h1>
+  <h1 align="center">VidiFlow Pro（AI视频解析）</h1>
   
   <p align="center">
     <strong>全链路异步化 / 长任务稳定性保障 / AI 智能问答 </strong>
