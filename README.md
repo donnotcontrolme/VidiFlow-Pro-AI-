@@ -8,24 +8,6 @@
     <strong>全链路异步化 / 长任务稳定性保障 / AI 智能问答 </strong>
   </p>
 
-  <p align="center">
-    <a href="https://github.com/Xiaoc7r/DOVideo-AI">
-      <img src="https://img.shields.io/badge/Spring%20Boot-3.0-brightgreen" alt="Spring Boot">
-    </a>
-    <a href="https://github.com/Xiaoc7r/DOVideo-AI">
-      <img src="https://img.shields.io/badge/RocketMQ-4.9-orange" alt="RocketMQ">
-    </a>
-    <a href="https://github.com/Xiaoc7r/DOVideo-AI">
-      <img src="https://img.shields.io/badge/Redisson-Lock-red" alt="Redisson">
-    </a>
-    <a href="https://github.com/Xiaoc7r/DOVideo-AI">
-      <img src="https://img.shields.io/badge/LangChain4j-AI-blueviolet" alt="LangChain4j">
-    </a>
-    <a href="https://github.com/Xiaoc7r/DOVideo-AI">
-      <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License">
-    </a>
-  </p>
-</div>
 
 <br/>
 
@@ -101,37 +83,8 @@ Docker
 Vue 3 + Vite 
 
 <br/>
-不严谨流程图
 
-```mermaid
-graph TD
-    A[客户端发起请求] --> B{Redis令牌桶限流}
-    B -- 超过阈值 --> C[拒绝请求 保障可用性]
-    B -- 获取令牌 --> D[分片并发上传]
-    D --> E(Redis记录分片状态断点续传)
-    E --> F[文件上传并合并完成]
-    
-    F --> G[封装元数据投递RocketMQ]
-    G --> H[上传接口立即返回 小于50ms]
 
-    G --> I[消费者异步拉取消息]
-    I --> J{计算文件MD5查询去重}
-    J -- 命中记录 --> K[直接关联并返回历史结果]
-    J -- 全新视频 --> L[加Redisson分布式锁]
-    
-    L --> M(WatchDog机制防止长耗时锁过期)
-    M --> N[调用FFmpeg提取音频]
-    N --> O[请求硅基流动API生成字幕与总结]
-    O --> P(指数退避重试兜底网络抖动)
-    P --> Q[保存结果释放锁并清理资源]
-
-    R[用户发起智能问答] --> S[Redis获取最近十轮对话]
-    S --> T[触发Function Calling机制]
-    T --> U[数据库检索相关视频信息]
-    U --> V[大模型结合上下文生成回复]
-```
-
-<br/>
 
 ## 我的开发环境 
 
